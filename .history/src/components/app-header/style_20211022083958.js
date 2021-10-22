@@ -65,7 +65,7 @@ export const HeaderLeft= styled.div`
         .nav-item.active {
             background-color: purple;
             &::after{
-                border-bottom:5px solid #C20202;
+                border-bottom:5px solid #C20202
             }
         }
     }

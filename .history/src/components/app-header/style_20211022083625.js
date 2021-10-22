@@ -58,15 +58,13 @@ export const HeaderLeft= styled.div`
                 position: absolute;
                 left:50%;
                 bottom: 0;
-                border: 5px solid transparent;
+                border: 5px solid black;
                 transform: translateX(-50%);
+
             }
         }
         .nav-item.active {
             background-color: purple;
-            &::after{
-                border-bottom:5px solid #C20202;
-            }
         }
     }
 
