@@ -24,8 +24,7 @@ const mapStateToProps= (state)=>({
 const mapDispatchToProps = dispatch =>(
     {
         getTopBanner: function(){
-            dispatch(getTopBannerAction())
-        }
+            dispatch(getTopBannerAction())}
     }
 )
 

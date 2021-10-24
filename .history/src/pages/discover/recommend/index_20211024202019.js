@@ -3,12 +3,9 @@ import { connect } from 'react-redux'
 
 import getTopBannerAction from './store/actionCreators'
 
-function Recommend(props) {
-    const { getTopBanner } = props
-    useEffect(() => {
-        getTopBanner()
-      
-    }, [getTopBanner])
+function Recommend() {
+
+    useE
 
     return (
         <div>
@@ -23,9 +20,7 @@ const mapStateToProps= (state)=>({
 
 const mapDispatchToProps = dispatch =>(
     {
-        getTopBanner: function(){
-            dispatch(getTopBannerAction())
-        }
+        getTopBannerAction: dispatch(getTopBannerAction())
     }
 )
 

@@ -1,14 +1,9 @@
-import React, { memo ,useEffect} from 'react'
+import React, { memo } from 'react'
 import { connect } from 'react-redux'
 
 import getTopBannerAction from './store/actionCreators'
 
-function Recommend(props) {
-    const { getTopBanner } = props
-    useEffect(() => {
-        getTopBanner()
-      
-    }, [getTopBanner])
+function Recommend() {
 
     return (
         <div>
@@ -23,9 +18,7 @@ const mapStateToProps= (state)=>({
 
 const mapDispatchToProps = dispatch =>(
     {
-        getTopBanner: function(){
-            dispatch(getTopBannerAction())
-        }
+        getTopBannerAction: dispatch(getTopBannerAction())
     }
 )
 

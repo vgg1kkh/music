@@ -7,8 +7,8 @@ function Recommend(props) {
     const { getTopBanner } = props
     useEffect(() => {
         getTopBanner()
-      
-    }, [getTopBanner])
+       
+    }, [props.getTopBanner])
 
     return (
         <div>
@@ -23,9 +23,7 @@ const mapStateToProps= (state)=>({
 
 const mapDispatchToProps = dispatch =>(
     {
-        getTopBanner: function(){
-            dispatch(getTopBannerAction())
-        }
+        getTopBanner: dispatch(getTopBannerAction())
     }
 )
 
