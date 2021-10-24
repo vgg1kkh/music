@@ -77,4 +77,8 @@ export default memo(function HYAppHeader() {
   );
 });
 
-
+{
+  /* <NavLink to="/">Discover</NavLink>
+<NavLink to="/mime">PlayList</NavLink>
+<NavLink to="/friend">Friend</NavLink> */
+}
