@@ -8,15 +8,13 @@ const initialState = Map({
             targetId:""
         }
     ]
-})
+}
 
 function recommendReducer(state=initialState,action){
     switch(action.type){
         case CHANGE_TOP_BANNERS:
             return (
-                // {...state, topBanner:action.payload}
-                // use set method for immutableJS
-                state.set("topBanner", action.payload)
+                {...state, topBanner:action.payload}
             )
         default: return state;
     }

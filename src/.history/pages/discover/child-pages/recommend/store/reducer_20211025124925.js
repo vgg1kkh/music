@@ -15,7 +15,7 @@ function recommendReducer(state=initialState,action){
         case CHANGE_TOP_BANNERS:
             return (
                 // {...state, topBanner:action.payload}
-                // use set method for immutableJS
+                // use set method for immutable
                 state.set("topBanner", action.payload)
             )
         default: return state;

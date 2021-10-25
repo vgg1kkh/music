@@ -2,11 +2,11 @@ import React, { memo, useEffect } from "react";
 import { useDispatch,useSelector,shallowEqual} from "react-redux";
 import getTopBannerAction from "./store/actionCreators";
 
-function Recommend() {
+function Recommend(props) {
  
   // lines to initial fetching data, replaced by hooks
   /* 
-  const { getTopBanner } = props;
+const { getTopBanner } = props;
   useEffect(() => {
         getTopBanner()
       
@@ -15,8 +15,7 @@ function Recommend() {
   //get the data with useDispatch
   const dispatch = useDispatch();
   const {topBanner} = useSelector(state => ({
-    // topBanner: state.recommend.topBanner
-    topBanner: state.get("recommend").get("topBanner")
+    topBanner: state.recommend.topBanner
   }),shallowEqual);
    console.log(topBanner);
 

@@ -15,8 +15,7 @@ function Recommend() {
   //get the data with useDispatch
   const dispatch = useDispatch();
   const {topBanner} = useSelector(state => ({
-    // topBanner: state.recommend.topBanner
-    topBanner: state.get("recommend").get("topBanner")
+    topBanner: state.recommend.topBanner.get()
   }),shallowEqual);
    console.log(topBanner);
 

@@ -16,7 +16,6 @@ function Recommend() {
   const dispatch = useDispatch();
   const {topBanner} = useSelector(state => ({
     // topBanner: state.recommend.topBanner
-    topBanner: state.get("recommend").get("topBanner")
   }),shallowEqual);
    console.log(topBanner);
 
