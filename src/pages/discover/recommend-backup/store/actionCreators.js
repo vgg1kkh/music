@@ -8,7 +8,7 @@ const getTopBannerAction = () => {
     });
   return (dispatch) => {
     getTopBanners().then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch(changeBannerAction(res.data.banners))
     });
   };

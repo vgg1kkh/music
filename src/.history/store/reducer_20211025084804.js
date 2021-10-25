@@ -1,5 +1,5 @@
  import {combineReducers} from 'redux'
-import { recommendReducer } from '../pages/discover/child-pages/recommend/store'
+import { recommendReducer } from '../pages/discover/child-pages/recommend'
 
  const allReducer = combineReducers(
      {

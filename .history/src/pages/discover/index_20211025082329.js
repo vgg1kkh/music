@@ -1,9 +1,9 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
 import { SubMenuWrapper } from "./style";
 import { dicoverMenu } from "../../common/local-data";
-
+import instance from "../../services/request"
 
 
 export default memo(function HYDiscover(props) {

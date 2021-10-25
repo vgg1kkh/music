@@ -12,7 +12,8 @@ function Recommend(props) {
 
     return (
         <div>
-            Recommend
+            Recommend {props.topBanner.length}
+            {console.log("topBanner.length=",props.topBanner.length)}
         </div>
     )
 }

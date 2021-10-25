@@ -8,7 +8,7 @@ import Album from "../pages/discover/child-pages/album";
 import DJRadio from "../pages/discover/child-pages/dj-radio";
 import Artist from "../pages/discover/child-pages/artist";
 import PlayList from "../pages/discover/child-pages/playlist";
-import Recommend from "../pages/discover/child-pages/recommend";
+import Recommend from "../pages/discover/";
 
 
 
