@@ -15,7 +15,7 @@ function Recommend(props) {
   const {topBanner} = useSelector((state) => ({
     topBanner: state.recommend.topBanner
   }));
-   console.log(topBanner);
+   console.log(recommendtopBanner);
 
   useEffect(() => {
     dispatch(getTopBannerAction());

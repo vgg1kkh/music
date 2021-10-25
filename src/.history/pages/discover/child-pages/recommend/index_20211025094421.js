@@ -12,10 +12,9 @@ function Recommend(props) {
 
   //get the data with useDispatch
   const dispatch = useDispatch();
-  const {topBanner} = useSelector((state) => ({
-    topBanner: state.recommend.topBanner
+  const recommend = useSelector((state) => ({
+    topBanner: state.recommend.topBanner,
   }));
-   console.log(topBanner);
 
   useEffect(() => {
     dispatch(getTopBannerAction());
@@ -23,7 +22,7 @@ function Recommend(props) {
 
   return (
     <div>
-      Recommend 
+      Recommend
       {/* {console.log("topBanner.length=",props.topBanner.length)} */}
     </div>
   );

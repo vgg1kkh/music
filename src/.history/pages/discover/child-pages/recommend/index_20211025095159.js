@@ -12,10 +12,10 @@ function Recommend(props) {
 
   //get the data with useDispatch
   const dispatch = useDispatch();
-  const {topBanner} = useSelector((state) => ({
+  const {top} = useSelector((state) => ({
     topBanner: state.recommend.topBanner
   }));
-   console.log(topBanner);
+   console.log(recommend.topBanner);
 
   useEffect(() => {
     dispatch(getTopBannerAction());
