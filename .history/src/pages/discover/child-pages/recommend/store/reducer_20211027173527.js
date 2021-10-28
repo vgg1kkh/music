@@ -1,0 +1,33 @@
+import { Map } from 'immutable'
+import { CHANGE_TOP_BANNERS ,CHANGE_HOT_RECOMMEND,CHANGE_NEW_ALBUM} from "./constants";
+
+const initialState = Map({
+    topBanner:[],
+    hotRecommend:[],
+    newAlbums:[]
+})
+
+function recommendReducer(state=initialState,action){
+    console.log(action.type);
+    switch(action.type){
+        case CHANGE_TOP_BANNERS:
+            return (
+                // {...state, topBanner:action.payload}
+                // use set method for immutableJS
+                state.set("topBanner", action.payload)
+            )
+        case CHANGE_HOT_RECOMMEND:
+            console.log("CHANGE_HOT_RECOMMEND Reducer is executed.",action.)
+            return(
+                state.set("hotRecommend",action.payload)
+            )
+        case CHANGE_NEW_ALBUM:
+            console.log("CHANGE_NEW_ALBUM Reducer is executed.",action.type)
+            return( 
+                state.set("newAlbums",action.payload)
+            )
+        default: return state;
+    }
+}
+
+export default recommendReducer
