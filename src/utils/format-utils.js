@@ -1,5 +1,5 @@
-export const getImageSize=(url,size)=>{
-    return url+`?param=${size}y${size}`
+export const getImageSize=(url,x,y=x)=>{
+    return url+`?param=${x}y${y}`
 }
 
 export const getCount= (num)=>{

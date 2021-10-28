@@ -17,7 +17,9 @@ function Recommend() {
           <NewAlbum />
           <Ranking />
         </RecommendLeft>
-        <RecommendRight></RecommendRight>
+        <RecommendRight>
+          abc
+        </RecommendRight>
       </Content>
     </RecommendWrapper>
   );
