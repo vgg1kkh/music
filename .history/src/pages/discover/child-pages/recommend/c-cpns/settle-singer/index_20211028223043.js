@@ -1,0 +1,25 @@
+import React, { memo, useEffect, shallowEqual } from 'react'
+import {useDispatch,use} from 'react-redux'
+import { getSettleSingerAction } from '../../store/actionCreators'
+import SettleSingerWrapper from './style'
+import ArtistHeaderline from '../artist-hot-composition/artist-headerline'
+
+export default memo(function SettleSinger() {
+
+   //redux hooks
+   const dispatch = useDispatch()
+   const {settleSings} = useSelector(state=>{
+       return 
+   },shallowEqual)
+
+   useEffect(()=>{
+    dispatch(getSettleSingerAction())
+   },[dispatch])
+   return(
+       <SettleSingerWrapper >
+           <ArtistHeaderline left="Exclusive Singers" right="See All"/>
+
+       </SettleSingerWrapper>
+        
+   )
+})
