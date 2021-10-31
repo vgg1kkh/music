@@ -13,6 +13,7 @@
     "icomoon-react": "^2.0.19",
     "immutable": "^4.0.0",
     "js-md5": "^0.7.3",
+    "moment": "^2.29.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
