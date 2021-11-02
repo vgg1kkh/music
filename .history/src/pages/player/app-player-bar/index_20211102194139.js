@@ -1,7 +1,6 @@
 import { memo, useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { CSSTransition } from 'react-transition-group';
 import { Slider, Tooltip } from "antd";
 import moment from "moment";
 import SliderPlaylist from "./c-cpns/slider-playlist"
@@ -267,7 +266,6 @@ export default memo(function HYAppPlayerBar() {
                   changeSong={nextMusic}
                   isPlaying={isPlaying}
                 />
-              </CSSTransition>
             </button>
           </div>
           <div

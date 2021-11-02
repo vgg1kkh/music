@@ -27,7 +27,7 @@ function PlaylistItem(props) {
     removeSongId(songId)
     const currentSongIndex = playList.findIndex(song => song.id===songId)
     if(playList.length === 1) return
-    playList.splice(currentSongIndex, 1) //remove one item in index "currentSongIndex"
+    playList.splice(currentSongIndex, 1) //remove one item in index
     dispatch(changePlaylistAndCount(playList))
     // 切换下一首音乐
     nextMusic()

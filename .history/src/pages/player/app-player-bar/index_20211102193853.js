@@ -1,7 +1,6 @@
 import { memo, useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { CSSTransition } from 'react-transition-group';
 import { Slider, Tooltip } from "antd";
 import moment from "moment";
 import SliderPlaylist from "./c-cpns/slider-playlist"
@@ -154,7 +153,7 @@ export default memo(function HYAppPlayerBar() {
       setIsPlaying(true + Math.random());
     };
   
-    // jump to the next song without playing
+    // jum
     const nextMusic = (tag) => {
       // 需要需要派发action,所以具体逻辑在actionCreator中完成
       dispatch(changeCurrentSongAction(tag));
@@ -254,11 +253,6 @@ export default memo(function HYAppPlayerBar() {
             onClick={()=>setIsShowSlide(!isShowSlide)}
             >
               {playList.length}
-              <CSSTransition
-                in={isShowSlide}
-                timeout={3000}
-                classNames="playlist"
-              >
               <SliderPlaylist
                   isShowSlider={isShowSlide}
                   // playlistCount={playlistCount}
@@ -267,7 +261,6 @@ export default memo(function HYAppPlayerBar() {
                   changeSong={nextMusic}
                   isPlaying={isPlaying}
                 />
-              </CSSTransition>
             </button>
           </div>
           <div

@@ -8,7 +8,7 @@ export const PlaylistItemWrapper = styled.div`
   cursor: pointer;
   justify-content: space-around;
   margin-top: 2px;
-  color:#eee;
+  color:#333;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.4);
