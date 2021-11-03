@@ -1,0 +1,7 @@
+const getTopBannerAction= ()=>{
+    return(
+        dispatch=>{
+
+        }
+    )
+}

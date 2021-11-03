@@ -1,0 +1,10 @@
+import React, { memo } from 'react'
+import { FooterWrapper } from './style'
+
+export default memo(function HYAppFooter() {
+    return (
+        <FooterWrapper>
+            Footer
+        </FooterWrapper>
+    )
+})

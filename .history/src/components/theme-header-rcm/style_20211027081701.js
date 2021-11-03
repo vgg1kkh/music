@@ -1,0 +1,51 @@
+import styled from 'styled-components'
+
+export const RcmHeaderWrapper = styled.div` //Outer Wrapper
+  display: flex;
+  justify-content: space-between;
+  height: 33px;
+  padding: 0 10px 0 0;
+  padding-left: ${props => props.showIcon?'34px':'2px'};
+  border-bottom: 2px solid #c10d0c;
+  background: ${props => {
+    const url = 'url('+require('@/assets/img/sprite_02.png').default+') no-repeat center'
+    return props.showIcon?  url: ''
+  } };
+  background-position: -225px -156px;
+  line-height: 33px;
+`
+
+export const RcmHeaderLeft = styled.div` //Left
+  display: flex;
+  .hot-title {
+    display: flex;
+    margin-bottom: 5px;
+    a {
+      color: #333333;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .keywords {
+    display: flex;
+    margin-left: 20px;
+    color: #ccc;
+    line-height: 35px;
+    .item {
+      .line {
+        margin: 0 10px;
+      }
+    }
+  }
+`
+
+export const RcmHeaderRight = styled.div`  //Right
+  .right{
+      display: flex;
+      align-items: center;
+    
+  }
+ 
+`

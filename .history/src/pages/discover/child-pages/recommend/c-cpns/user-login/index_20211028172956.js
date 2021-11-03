@@ -1,0 +1,14 @@
+import React, { memo } from 'react'
+import UserLoginWrapper from './style'
+
+export default memo(function UserLogin() {
+    return (
+        <UserLoginWrapper>
+            <div className="profile-info sprite_02">
+            <p>Log in to NetEase Cloud Music, you can enjoy the fun of unlimited collection, and unlimited synchronization to mobile phones</p>
+            <button></button>
+            </div>
+            
+        </UserLoginWrapper>
+    )
+})
