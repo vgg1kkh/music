@@ -172,7 +172,7 @@ export const Operator = styled.div`
   display: flex;
   position: relative;
   top: 5px;
-  /* background-color: purple; */
+  background-color: purple;
 
   .btn {
     width: 25px;
