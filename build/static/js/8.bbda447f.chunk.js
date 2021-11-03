@@ -1,0 +1,2 @@
+(this["webpackJsonpmusic-box"]=this["webpackJsonpmusic-box"]||[]).push([[8],{315:function(c,s,t){"use strict";t.r(s);var e=t(0),i=t(3);s.default=Object(e.memo)((function(){return Object(i.jsx)("div",{children:"DJ"})}))}}]);
+//# sourceMappingURL=8.bbda447f.chunk.js.map
