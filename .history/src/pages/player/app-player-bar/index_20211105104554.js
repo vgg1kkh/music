@@ -53,7 +53,7 @@ export default memo(function HYAppPlayerBar() {
       });
     // 如果不是首次加载: 播放音乐
     // if (!firstLoad) setIsPlaying(true + Math.random());
-  }, [currentSong]);
+  }, [currentSong,firstLoad]);
 
   useEffect(()=>setFirstLoad(false),[])
 

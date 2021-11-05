@@ -58,6 +58,7 @@ export const changeCurrentSongAction = (tag) => {
     const sequence = getState().getIn(["player", "sequence"]);
     const currentSongIndex = getState().getIn(["player", "currentSongIndex"]);
     const playList = getState().getIn(["player", "playList"]);
+    console.log("inChangeCurretSongAction", playList.length);
 
     let nextSongIndex;
 

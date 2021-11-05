@@ -48,14 +48,17 @@ export default memo(function HYAppPlayerBar() {
         setIsPlaying(false)
         if(!firstLoad){
           message.error("Can't play the selected song due to copyright issue.")
-          
+          setFirstLoad(false)
         }
+        
       });
     // 如果不是首次加载: 播放音乐
     // if (!firstLoad) setIsPlaying(true + Math.random());
-  }, [currentSong]);
+  }, [currentSong,firstLoad]);
 
-  useEffect(()=>setFirstLoad(false),[])
+  useEffect(()=>{
+    setFirstLoad(true)
+  },[])
 
   //other handles
   const picUrl = (currentSong.al && currentSong.al.picUrl) || "";

@@ -2,7 +2,7 @@ import { memo, useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
-import { Slider, Tooltip ,message} from "antd";
+import { Slider, Tooltip } from "antd";
 import moment from "moment";
 import SliderPlaylist from "./c-cpns/slider-playlist"
 import { getImageSize, getPlayUrl } from "../../../utils/format-utils";
@@ -17,7 +17,6 @@ export default memo(function HYAppPlayerBar() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isShowBar, setIsShowBar] = useState(false);
   const [isShowSlide, setIsShowSlide] = useState(false)
-  const [firstLoad, setFirstLoad] = useState(true)
 
   //redux hooks
   const dispatch = useDispatch();
@@ -46,16 +45,10 @@ export default memo(function HYAppPlayerBar() {
       .then((res) => setIsPlaying(true))
       .catch((reason) => {
         setIsPlaying(false)
-        if(!firstLoad){
-          message.error("Can't play the selected song due to copyright issue.")
-          
-        }
-      });
+        );
     // 如果不是首次加载: 播放音乐
     // if (!firstLoad) setIsPlaying(true + Math.random());
   }, [currentSong]);
-
-  useEffect(()=>setFirstLoad(false),[])
 
   //other handles
   const picUrl = (currentSong.al && currentSong.al.picUrl) || "";

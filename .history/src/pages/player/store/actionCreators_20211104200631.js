@@ -5,7 +5,7 @@ import {
   CHANGE_PLAY_LIST,
   CHANGE_CURRENT_SONG_INDEX,
   CHANGE_PLAY_SEQUENCE,
-  CHANGE_PLAY_LIST_COUNT,
+  CHANGE_PLAY_LIST_COUNT
 } from "./constants";
 import { getRandomNumber } from "@/utils/math-utils";
 import { parseLyric } from "@/utils/parse-lyric";
@@ -58,6 +58,7 @@ export const changeCurrentSongAction = (tag) => {
     const sequence = getState().getIn(["player", "sequence"]);
     const currentSongIndex = getState().getIn(["player", "currentSongIndex"]);
     const playList = getState().getIn(["player", "playList"]);
+    console.log("inChangeCurretSongAction", playList.length);
 
     let nextSongIndex;
 
@@ -91,35 +92,33 @@ export const changeCurrentSongAction = (tag) => {
   };
 };
 
-export const changeLyricListAction = (lyric) => ({
-  type: CHANGE_LYRIC_LIST,
-  payload: lyric,
-});
+export const changeLyricListAction = (lyric) =>({
+      type:CHANGE_LYRIC_LIST,
+      payload: lyric
+    })
 
 //create the Lyric Action
 export const getLyricListAction = (id) => {
   return (dispatch) => {
     getLyric(id).then((res) => {
       // console.log("LYric=", res.lrc.lyric)
-      if (res.lrc && res.lyric) {
-        const lyric = res.lrc.lyric;
-        const lyricList = parseLyric(lyric);
-        dispatch(changeLyricListAction(lyricList));
-      }
-    });
-  };
-};
+      const lyric = res.lrc.lyric
+      const lyricList= parseLyric(lyric)
+      dispatch(changeLyricListAction(lyricList))
+    })
+  }
+}
 
 // 改变歌曲数量
 const changePlayListCount = (count) => ({
   type: CHANGE_PLAY_LIST_COUNT,
   count,
-});
+})
 
 // 修改播放列表并修改歌曲数量
 export const changePlaylistAndCount = (playlist) => {
   return (dispatch) => {
-    dispatch(changePlayListAction(playlist));
-    dispatch(changePlayListCount(playlist.length));
-  };
-};
+    dispatch(changePlayListAction(playlist))
+    dispatch(changePlayListCount(playlist.length))
+  }
+}
