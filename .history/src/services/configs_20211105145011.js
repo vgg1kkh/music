@@ -1,5 +1,5 @@
 // const devBaseURL = "https://music-api-vgg1kkh.vercel.app"
-const devBaseURL = "http://123.207.32.32:9001"
+// const devBaseURL = "http://123.207.32.32:9001"
 const proBaseURL = "http://123.207.32.32:9001/";
 
 // 已经部署到服务器上的API
