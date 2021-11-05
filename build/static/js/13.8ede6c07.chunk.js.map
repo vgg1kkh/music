@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../music-box/src/pages/mime/index.js"],"names":["memo"],"mappings":"+GAAA,yBAEeA,0BAAK,WAChB,OACI","file":"static/js/13.8ede6c07.chunk.js","sourcesContent":["import React, { memo } from 'react';\r\n\r\nexport default memo(function HYMime() {\r\n    return (\r\n        <div>\r\n            HYMime\r\n        </div>\r\n    )\r\n})\r\n"],"sourceRoot":""}
