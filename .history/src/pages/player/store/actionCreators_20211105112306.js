@@ -59,6 +59,7 @@ export const changeCurrentSongAction = (tag) => {
     const currentSongIndex = getState().getIn(["player", "currentSongIndex"]);
     const playList = getState().getIn(["player", "playList"]);
 
+
     let nextSongIndex;
 
     switch (sequence) {
@@ -109,6 +110,14 @@ export const getLyricListAction = (id) => {
     });
   };
 };
+
+      const lyric = res.lrc.lyric
+      const lyricList= parseLyric(lyric)
+      dispatch(changeLyricListAction(lyricList))
+    })
+  }
+}
+
 
 // 改变歌曲数量
 const changePlayListCount = (count) => ({

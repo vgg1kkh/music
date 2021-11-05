@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import { createSongDetailsAction } from "../../pages/player/store"
 
 export default memo(function TopRanking(props) {
-  const { info } = props;
+  const { info, index } = props;
   const { tracks = [] } = info;
 
  const dispatch = useDispatch()

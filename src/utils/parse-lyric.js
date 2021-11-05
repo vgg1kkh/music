@@ -51,7 +51,7 @@ export function parseLyric(lyricString){
     // const parseExp1 = /\[(\d{2}:\d{2}:)\.\d{2,3}\]/
     const parseExp = /\[(\d{2}):(\d{2})\.(\d{2,3})\]/
     const lineStrings = lyricString.split("\n")
-    // console.log(lineStrings);
+    console.log(lineStrings);
     const lyrics = []
     for(let line of lineStrings){     
         if(line){
